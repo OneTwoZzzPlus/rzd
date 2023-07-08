@@ -1,0 +1,2 @@
+cd C:\
+jupyter-lab
