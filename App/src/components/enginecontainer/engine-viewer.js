@@ -10,10 +10,10 @@ let mindArController = null;
 export function EngineViewer(){
     const { unityProvider, addEventListener, removeEventListener, sendMessage, loadingProgression, isLoaded } =
         useUnityContext({
-            loaderUrl: "./engine/ar.loader.js",
-            dataUrl: "./engine/ar.data",
-            frameworkUrl: "./engine/ar.framework.js",
-            codeUrl: "./engine/ar.wasm",
+            loaderUrl: "./engine/Build/UnityBuild.loader.js",
+            dataUrl: "./engine/Build/UnityBuild.data",
+            frameworkUrl: "./engine/Build/UnityBuild.framework.js",
+            codeUrl: "./engine/Build/UnityBuild.wasm",
             streamingAssetsUrl: "streamingassets",
         });
        
