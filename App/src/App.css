@@ -1,13 +1,3 @@
-.App {
-  display: table;
-  height: 100%;
-}
-
-html, body {
-  height: 100%;
-  overflow: hidden;
-}
-
 .engine{
   position: absolute;
   height: 100%;
@@ -17,9 +7,33 @@ html, body {
 .engine > .loading-overlay {
   justify-content: center;
   align-items: center;
+  font-style: normal;
+  color: white;
+}
+
+#percent {
+  position: absolute;
+  bottom: 5px;
   font-size: 50px;
-  color: red;
   font-weight: bold;
+}
+
+#name {
+  position: center;
+  bottom: 5px;
+  font-weight: bold;
+}
+
+/*****************************************/
+
+.App {
+  display: table;
+  height: 100%;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
 }
 
 .App-logo {
