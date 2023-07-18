@@ -83,19 +83,22 @@ export function EngineViewer(){
         }, []);    
        
         return (
-            <div className="engine">
-              {isOnboarding ?
-                <div className="loading-overlay" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%", background: "#e21a1a", display: "flex", zIndex: 4}}>
-                  <img src = "./pictures/rzd.jpg" style={{}}/>
-                  <p id="name">
-                    <span style={{"font-size": "20px"}}>Мобильный помощник</span>
-                    <span style={{"font-size": "10px"}}><br/>по безопастности на объектах<br/>железнодорожной инфраструктуры</span>
-                  </p>
-                  <p id="percent">{loadingPercentage}%</p>
-                  
-                </div> : null
-              }
-              <Unity unityProvider={unityProvider} style={{position: "absoute", width: "100%", height: "100%", overflow: "hidden", zIndex: 3}}/>  
-            </div>
+          <div className="engine">
+          {isOnboarding ?
+            <div className="loading-overlay" style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%", background: "#E21A1A", display: "flex", zIndex: 4}}>                  
+              <p id = "App_title"> <font size="5"><strong>Мобильный помощник</strong></font><br></br> по правилам безопасного поведения <br></br>на объектах железнодорожной инфраструктуры </p>
+              <p id = "Percent"> ЗАГРУЗКА... {loadingPercentage} % </p>
+              <p id="RZD_logo"><img  src="./rzd_logo.png"></img></p>
+              <div className="Loading_poezd" style={{left: loadingPercentage}}/* onLoad={load}*/>
+                <img src="./poezd.png"></img> 
+              </div>
+              <div className="Loading_Line" style={{left: loadingPercentage}}>
+                <hr color="#ffffff" width="1024px" scale="10px"></hr>
+              </div>
+              
+            </div> : null
+          }
+          <Unity unityProvider={unityProvider} style={{position: "center", width: "100%", height: "100%", overflow: "hidden", zIndex: 3}}/>  
+        </div>
         );        
     }

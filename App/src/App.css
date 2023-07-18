@@ -1,3 +1,15 @@
+.App {
+  display: table;
+  height: 100%;
+}
+
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+
 .engine{
   position: absolute;
   height: 100%;
@@ -7,66 +19,71 @@
 .engine > .loading-overlay {
   justify-content: center;
   align-items: center;
-  font-style: normal;
-  color: white;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  font-weight: light;
 }
 
-#percent {
+.Loading_poezd {
   position: absolute;
-  bottom: 5px;
-  font-size: 50px;
-  font-weight: bold;
+  bottom: 6%;
+  scale: 25%;
+  transform: translateX(-199%);
 }
 
-#name {
+.Loading_Line {
+  position: absolute;
+  bottom: 8%;
+  
+  transform: translateX(-40%);
+}
+
+#App_title {
+  
   position: center;
-  bottom: 5px;
+  text-align: left;
+  font-weight: medium;
+}
+
+#Percent {
+  position: absolute;
+  bottom: 2%;
+  left:50%;
+  transform: translateX(-50%);
   font-weight: bold;
+  font-size: 20px;
 }
 
-/*****************************************/
-
-.App {
-  display: table;
-  height: 100%;
+#RZD_logo {
+  position: absolute;
+  scale: 20%;
+  top: -30%;
 }
 
-html, body {
-  height: 100%;
-  overflow: hidden;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/*@keyframes load_anim{
+  0% {
+    transform: translateX(0%);
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  5% {
+    transform: translateX(5%);
   }
-  to {
-    transform: rotate(360deg);
+
+  15%{
+    transform: translateX(15%);
   }
-}
+
+  25% {
+    transform: translateX(25%);
+  }
+
+  50%{
+    transform: translateX(50%);
+  }
+
+  100%{
+    transform: translateX(100%);
+  }
+} */
