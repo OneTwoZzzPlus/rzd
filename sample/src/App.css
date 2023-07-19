@@ -23,27 +23,22 @@ html, body {
   font-size: 20px;
   color: rgb(255, 255, 255);
   font-weight: light;
+  animation: color_change 3s linear infinite;
 }
 
 .Loading_poezd {
   position: absolute;
   bottom: 6%;
   scale: 25%;
-  transform: translateX(-199%);
+  transform: translateX(-215%);
 }
 
-.Loading_Line {
-  position: absolute;
-  bottom: 8%;
-  
-  transform: translateX(-40%);
-}
 
 #App_title {
-  
   position: center;
   text-align: left;
   font-weight: medium;
+  transform: translateX(7%);
 }
 
 
@@ -54,18 +49,31 @@ html, body {
   transform: translateX(-50%);
   font-weight: bold;
   font-size: 20px;
+  color: white;
 }
 
-
+#line {
+  position: absolute;
+  bottom: 10%;
+  height: 0.5px;
+}
 
 #RZD_logo {
   position: absolute;
-  scale: 20%;
-  top: -30%;
+  scale: 15%;
+  top: -250px;
 }
 
 
+@keyframes color_change {
+  0%, 100%{
+    color: white;
+  }
+  50%{
+    color: rgb(226, 26, 26);
+  }
 
+}
 /*@keyframes load_anim{
   0% {
     transform: translateX(0%);
