@@ -59,9 +59,9 @@ html, body {
 }
 
 #rzd_logo {
-  position: inherit;
-  scale: 20%;
-  top: -20%;  
+  position: absolute;
+  scale: 10%;
+  top: -200px;  
 }
 
 #App{
