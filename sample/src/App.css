@@ -37,7 +37,7 @@ html, body {
 #App_title {
   position: center;
   text-align: left;
-  font-weight: medium;
+  font-weight: medium; 
   transform: translateX(7%);
 }
 
