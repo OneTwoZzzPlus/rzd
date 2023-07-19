@@ -1,3 +1,11 @@
+:root{
+  --position_p: 20%;
+
+}
+
+
+
+
 .App {
   display: table;
   height: 100%;
@@ -11,10 +19,11 @@ html, body {
 
 
 .engine{
-  position: absolute;
+  position: static;
   height: 100%;
   width: 100%;
 }
+
 
 .engine > .loading-overlay {
   justify-content: center;
@@ -24,66 +33,46 @@ html, body {
   font-weight: light;
 }
 
-.Loading_poezd {
-  position: absolute;
-  bottom: 6%;
-  scale: 25%;
-  transform: translateX(-199%);
-}
 
-.Loading_Line {
-  position: absolute;
-  bottom: 8%;
-  
-  transform: translateX(-40%);
-}
 
-#App_title {
-  
-  position: center;
-  text-align: left;
-  font-weight: medium;
-}
-
-#Percent {
+#percent {
   position: absolute;
-  bottom: 2%;
-  left:50%;
-  transform: translateX(-50%);
+  top: 90%;
+
+
   font-weight: bold;
-  font-size: 20px;
 }
 
-#RZD_logo {
+#loading_line {
   position: absolute;
-  scale: 20%;
-  top: -30%;
+  top: 85%;
+  width: 100%;
 }
 
+#load_anim {
+  position: fixed;
+  scale: 20%;
+  top: 75%;
+  transform: translateX(5%);
+  animation: load_anim 2s linear;
 
+}
 
-/*@keyframes load_anim{
+#rzd_logo {
+  position: inherit;
+  scale: 20%;
+  top: -20%;  
+}
+
+#App{
+  position: absolute;
+  transform: translateX(7%);
+}
+@keyframes load_anim{
   0% {
-    transform: translateX(0%);
+    transform: translateX(-20%);
   }
-
-  5% {
-    transform: translateX(5%);
-  }
-
-  15%{
-    transform: translateX(15%);
-  }
-
-  25% {
-    transform: translateX(25%);
-  }
-
-  50%{
-    transform: translateX(50%);
-  }
-
   100%{
-    transform: translateX(100%);
+    transform: translateX(+position_p);
   }
-} */
+}

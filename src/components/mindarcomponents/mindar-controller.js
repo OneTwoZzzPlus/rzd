@@ -11,6 +11,7 @@ export class MindARReact{
         this.anchors = [];
     }
 
+
     async initiateAR(){
         await this._initiateAR();
     }
@@ -22,13 +23,16 @@ export class MindARReact{
         return anchor;
     }    
 
+
     start(){
         this.controller.processVideo(this.video);
     }
 
+
     stop(){
         this.controller.stopProcessVideo();
     }
+
 
     async _initiateAR(){
        return new Promise(async (resolve, reject)=>{
@@ -42,6 +46,7 @@ export class MindARReact{
                             if (this.anchors[i].targetIndex === targetIndex) {
                                 this.anchors[i].isMatrixComputed = worldMatrix !== null;
                                
+
 
                                 if(worldMatrix !== null){
                                     let m = new Matrix4();
@@ -75,8 +80,10 @@ export class MindARReact{
                 }
             });
 
+
             this.postMatrixs = [];
             const { dimensions: imageTargetDimensions } = await this.controller.addImageTargets(this.imageTargetSrc);
+
 
             for (let i = 0; i < imageTargetDimensions.length; i++) {
                 const position = new Vector3();
